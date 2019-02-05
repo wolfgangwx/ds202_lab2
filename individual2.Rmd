@@ -1,0 +1,39 @@
+---
+title: "individual2"
+author: "xiwang"
+date: "02/05/19"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Load data
+
+```{r cars}
+choco <- read.csv("https://xdaiisu.github.io/ds202materials/hwlabs/choco.csv")
+head(choco)
+```
+
+## Rating distribute
+
+##### the rating of choco is normal distributed.
+##### when chekcing the boxplot, there some are outliers at 1 or 2 rating and 5 rating.
+
+```{r}
+hist(choco$Rating)
+boxplot(choco$Rating)
+```
+
+
+## Realtionship between rating and cacao
+
+##### showing on the plot,there cannot be identifid significant relationship between rating and cacao percentage.
+
+```{r}
+plot(choco$Rating, choco$Cocoa.Pct)
+```
+
+
+
